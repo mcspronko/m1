@@ -53,6 +53,11 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get -q -y install mysql-server-5.5
 echo "done"
 
+# create database magento
+echo "Create database called magento"
+mysql -u root -e 'create database magento;'
+echo "done"
+
 # install Git
 echo "Installing Git"
 apt-get install -y git-core
